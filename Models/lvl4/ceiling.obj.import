@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bujpj3pipvtwr"
+path="res://.godot/imported/ceiling.obj-7cdcae812a51849c6906850fa7318262.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ceiling.obj-7cdcae812a51849c6906850fa7318262.mesh"]
+
+source_file="res://Models/lvl4/ceiling.obj"
+dest_files=["res://.godot/imported/ceiling.obj-7cdcae812a51849c6906850fa7318262.mesh", "res://.godot/imported/ceiling.obj-7cdcae812a51849c6906850fa7318262.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

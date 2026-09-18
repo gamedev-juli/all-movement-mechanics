@@ -1,0 +1,333 @@
+[gd_scene load_steps=47 format=3 uid="uid://dbkjo6f5rt755"]
+
+[ext_resource type="Script" uid="uid://c33m674fdww8w" path="res://Scripts/character.gd" id="1_qjibj"]
+[ext_resource type="Material" uid="uid://ddhe4e5788btq" path="res://Materials/mat_player.tres" id="2_m3tyl"]
+[ext_resource type="Script" uid="uid://di0j7ibtxdixv" path="res://Scripts/camera.gd" id="3_r8qa2"]
+[ext_resource type="Script" uid="uid://d044bbqxx4ukf" path="res://Scripts/import_parkour.gd" id="4_8akfv"]
+[ext_resource type="Material" uid="uid://blbjcbhn1by56" path="res://Materials/minecraft_gold.tres" id="7_6834p"]
+[ext_resource type="Material" uid="uid://dim0tm4f5vfdw" path="res://Materials/minecraft_stone_smooth.tres" id="9_f80xo"]
+[ext_resource type="Material" uid="uid://b7jath70eyivq" path="res://Materials/minecraft_diamond.tres" id="11_0y0i8"]
+[ext_resource type="Material" uid="uid://fh3kmmb0djex" path="res://Materials/minecraft_grass.tres" id="13_xc80s"]
+[ext_resource type="Material" uid="uid://clc75631sd03b" path="res://Materials/minecraft_oak_planks.tres" id="18_31kaw"]
+[ext_resource type="PackedScene" uid="uid://dkml6mm3ufdju" path="res://Scenes/ui.tscn" id="24_fdmf7"]
+[ext_resource type="Material" uid="uid://b8s0ijwmjic1k" path="res://Materials/minecraft_redstone.tres" id="26_agyoa"]
+[ext_resource type="Script" uid="uid://dsf31sy5grbvi" path="res://Scripts/portals.gd" id="31_rhl1v"]
+[ext_resource type="Material" uid="uid://crs33rh0m1a0f" path="res://Materials/mat_portal0.tres" id="32_jqfeg"]
+[ext_resource type="Material" uid="uid://b5u267v1yuo0" path="res://Materials/mat_portal1.tres" id="33_ngd6x"]
+[ext_resource type="Script" uid="uid://2ywos1qcagrt" path="res://Scripts/rope.gd" id="34_1lwfc"]
+[ext_resource type="Script" uid="uid://cc6jvjo1xvf3f" path="res://Scripts/slingshot.gd" id="35_q6ye2"]
+[ext_resource type="Material" uid="uid://bbo3lpyrmqml1" path="res://Materials/mat_slingshot.tres" id="36_vcdd6"]
+[ext_resource type="Script" uid="uid://bsacobil4depu" path="res://Scripts/axes.gd" id="37_rpse5"]
+[ext_resource type="ArrayMesh" uid="uid://lp54kb5kt23d" path="res://Models/lvl4/back.obj" id="72_cf62m"]
+[ext_resource type="ArrayMesh" uid="uid://bujpj3pipvtwr" path="res://Models/lvl4/ceiling.obj" id="73_h6167"]
+[ext_resource type="ArrayMesh" uid="uid://50i8murpb3c" path="res://Models/lvl4/floor.obj" id="74_10ykv"]
+[ext_resource type="ArrayMesh" uid="uid://k3sbm61g0oua" path="res://Models/lvl4/front.obj" id="75_pplpr"]
+[ext_resource type="ArrayMesh" uid="uid://bnpsurws6f6qg" path="res://Models/lvl4/left.obj" id="76_y5tfn"]
+[ext_resource type="ArrayMesh" uid="uid://0nq3kf5ixxd7" path="res://Models/lvl4/right.obj" id="77_2waag"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hdf80"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jwpg7"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ynmfv"]
+
+[sub_resource type="Sky" id="Sky_1bvp3"]
+sky_material = SubResource("PanoramaSkyMaterial_ynmfv")
+
+[sub_resource type="Environment" id="Environment_lquwl"]
+background_mode = 2
+sky = SubResource("Sky_1bvp3")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
+ssao_intensity = 2.61
+
+[sub_resource type="SphereMesh" id="SphereMesh_5vw27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+shading_mode = 0
+albedo_color = Color(0.146157, 0.239849, 1, 1)
+disable_receive_shadows = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vivmo"]
+size = Vector2(2, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vivmo"]
+size = Vector3(2.2, 0.2, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2cqfq"]
+size = Vector3(0.1, 0.2, 3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7mycd"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cegan"]
+top_radius = 0.05
+bottom_radius = 0.2
+height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_getpj"]
+albedo_color = Color(0.344081, 0.780405, 0.37609, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_getpj"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryguw"]
+albedo_color = Color(0, 0.695587, 0.839666, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ryguw"]
+top_radius = 0.0
+height = 0.7
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6h1fc"]
+data = PackedVector3Array(10, 10, 10, -10, 0, 10, 10, 0, 10, -10, 10, 10, -10, 0, 10, 10, 10, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vxl7x"]
+data = PackedVector3Array(-10, 10, -10, 10, 10, 10, 10, 10, -10, -10, 10, 10, 10, 10, 10, -10, 10, -10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ihvwq"]
+data = PackedVector3Array(10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, 10, -10, 0, 10, 10, 0, -10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k8rh3"]
+data = PackedVector3Array(-10, 10, -10, 10, 0, -10, -10, 0, -10, 10, 10, -10, 10, 0, -10, -10, 10, -10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_55idt"]
+data = PackedVector3Array(-10, 10, 10, -10, 0, -10, -10, 0, 10, -10, 10, -10, -10, 0, -10, -10, 10, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_87bhu"]
+data = PackedVector3Array(10, 10, -10, 10, 0, 10, 10, 0, -10, 10, 10, 10, 10, 0, 10, 10, 10, -10)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 0)
+script = ExtResource("1_qjibj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CylinderShape3D_hdf80")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+material_override = ExtResource("2_m3tyl")
+gi_mode = 0
+mesh = SubResource("CylinderMesh_jwpg7")
+
+[node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/CameraPivot"]
+spring_length = 3.0
+
+[node name="CameraPivotClimb" type="Node3D" parent="CharacterBody3D/CameraPivot/SpringArm3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+size = 8.292
+script = ExtResource("3_r8qa2")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+visible = false
+target_position = Vector3(0, 0, -30)
+hit_back_faces = false
+debug_shape_custom_color = Color(0.680655, 0.2941, 0.135247, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lquwl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7.65209, 0)
+visible = false
+shadow_enabled = true
+
+[node name="GrapplePointMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+visible = false
+cast_shadow = 0
+mesh = SubResource("SphereMesh_5vw27")
+surface_material_override/0 = SubResource("StandardMaterial3D_kek77")
+
+[node name="GrappleAnchors" type="Node3D" parent="."]
+visible = false
+
+[node name="Portals" type="Node3D" parent="." node_paths=PackedStringArray("bounds_portal0", "bounds_portal1")]
+script = ExtResource("31_rhl1v")
+bounds_portal0 = [NodePath("Portal0/CollisionShape3D"), NodePath("Portal0/CollisionShape3D2"), NodePath("Portal0/CollisionShape3D3"), NodePath("Portal0/CollisionShape3D4")]
+bounds_portal1 = [NodePath("Portal1/CollisionShape3D"), NodePath("Portal1/CollisionShape3D2"), NodePath("Portal1/CollisionShape3D3"), NodePath("Portal1/CollisionShape3D4")]
+
+[node name="Portal0" type="StaticBody3D" parent="Portals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9653, 3.01034, 9.2046)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/Portal0"]
+material_override = ExtResource("32_jqfeg")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_vivmo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portals/Portal0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -1.55)
+shape = SubResource("BoxShape3D_vivmo")
+disabled = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Portals/Portal0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 1.55)
+shape = SubResource("BoxShape3D_vivmo")
+disabled = true
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Portals/Portal0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, -0.1, 0)
+shape = SubResource("BoxShape3D_2cqfq")
+disabled = true
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Portals/Portal0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, -0.1, 0)
+shape = SubResource("BoxShape3D_2cqfq")
+disabled = true
+
+[node name="Portal1" type="StaticBody3D" parent="Portals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3818, 3.01034, 9.2046)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/Portal1"]
+material_override = ExtResource("33_ngd6x")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_vivmo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portals/Portal1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -1.55)
+shape = SubResource("BoxShape3D_vivmo")
+disabled = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Portals/Portal1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 1.55)
+shape = SubResource("BoxShape3D_vivmo")
+disabled = true
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Portals/Portal1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, -0.1, 0)
+shape = SubResource("BoxShape3D_2cqfq")
+disabled = true
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Portals/Portal1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, -0.1, 0)
+shape = SubResource("BoxShape3D_2cqfq")
+disabled = true
+
+[node name="Doppelganger" type="Node3D" parent="Portals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.81158, 2.5401, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/Doppelganger"]
+material_override = ExtResource("2_m3tyl")
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Rope" type="Node3D" parent="."]
+script = ExtResource("34_1lwfc")
+
+[node name="Slingshot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.35, 1.364, 30)
+script = ExtResource("35_q6ye2")
+color_start = Color(0.99, 0, 0, 1)
+
+[node name="PoleLeft" type="MeshInstance3D" parent="Slingshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -2, 0)
+visible = false
+material_override = ExtResource("36_vcdd6")
+transparency = 0.5
+mesh = SubResource("CylinderMesh_cegan")
+
+[node name="Marker3D" type="Marker3D" parent="Slingshot/PoleLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.76793, 0)
+
+[node name="PoleRight" type="MeshInstance3D" parent="Slingshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, 0)
+visible = false
+material_override = ExtResource("36_vcdd6")
+transparency = 0.5
+mesh = SubResource("CylinderMesh_cegan")
+
+[node name="Marker3D" type="Marker3D" parent="Slingshot/PoleRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.76793, 0)
+
+[node name="Axes" type="Node3D" parent="."]
+script = ExtResource("37_rpse5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Axes"]
+visible = false
+material_override = SubResource("StandardMaterial3D_getpj")
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_getpj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Axes/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.867616, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_ryguw")
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_ryguw")
+
+[node name="Parkour_lvl4" type="Node3D" parent="."]
+script = ExtResource("4_8akfv")
+
+[node name="back" type="StaticBody3D" parent="Parkour_lvl4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour_lvl4/back"]
+material_override = ExtResource("18_31kaw")
+mesh = ExtResource("72_cf62m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour_lvl4/back"]
+shape = SubResource("ConcavePolygonShape3D_6h1fc")
+
+[node name="ceiling" type="StaticBody3D" parent="Parkour_lvl4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour_lvl4/ceiling"]
+material_override = ExtResource("11_0y0i8")
+mesh = ExtResource("73_h6167")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour_lvl4/ceiling"]
+shape = SubResource("ConcavePolygonShape3D_vxl7x")
+
+[node name="floor" type="StaticBody3D" parent="Parkour_lvl4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour_lvl4/floor"]
+material_override = ExtResource("7_6834p")
+mesh = ExtResource("74_10ykv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour_lvl4/floor"]
+shape = SubResource("ConcavePolygonShape3D_ihvwq")
+
+[node name="front" type="StaticBody3D" parent="Parkour_lvl4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour_lvl4/front"]
+material_override = ExtResource("26_agyoa")
+mesh = ExtResource("75_pplpr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour_lvl4/front"]
+shape = SubResource("ConcavePolygonShape3D_k8rh3")
+
+[node name="left" type="StaticBody3D" parent="Parkour_lvl4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour_lvl4/left"]
+material_override = ExtResource("9_f80xo")
+mesh = ExtResource("76_y5tfn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour_lvl4/left"]
+shape = SubResource("ConcavePolygonShape3D_55idt")
+
+[node name="right" type="StaticBody3D" parent="Parkour_lvl4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour_lvl4/right"]
+material_override = ExtResource("13_xc80s")
+mesh = ExtResource("77_2waag")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour_lvl4/right"]
+shape = SubResource("ConcavePolygonShape3D_87bhu")
+
+[node name="Lights_lvl4" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights_lvl4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+light_energy = 2.641
+omni_range = 17.2293
+
+[node name="CanvasLayer" parent="." instance=ExtResource("24_fdmf7")]

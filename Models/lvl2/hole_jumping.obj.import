@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1t2grp47au2w"
+path="res://.godot/imported/hole_jumping.obj-74f0a0946d30f9a61cfe0de1daa60b8d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hole_jumping.obj-74f0a0946d30f9a61cfe0de1daa60b8d.mesh"]
+
+source_file="res://Models/lvl2/hole_jumping.obj"
+dest_files=["res://.godot/imported/hole_jumping.obj-74f0a0946d30f9a61cfe0de1daa60b8d.mesh", "res://.godot/imported/hole_jumping.obj-74f0a0946d30f9a61cfe0de1daa60b8d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkml6mm3ufdju"]
+
+[ext_resource type="Script" uid="uid://b6lewos32yklv" path="res://Scripts/ui.gd" id="1_nf4gj"]
+[ext_resource type="Script" uid="uid://bo1lxpyq4plx8" path="res://Scripts/crosshair.gd" id="2_2246s"]
+[ext_resource type="Script" uid="uid://dvcrboggdorq0" path="res://Scripts/grapple_ui_manager.gd" id="3_q7pk6"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_nf4gj")
+
+[node name="TopLeftVBox" type="VBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 175.0
+offset_bottom = 56.0
+
+[node name="FPSLabel" type="Label" parent="TopLeftVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.658824)
+text = "FPS:"
+
+[node name="SpeedLabel" type="Label" parent="TopLeftVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.658824)
+text = "Speed:"
+
+[node name="Crosshair" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2246s")
+colorHit = Color(1, 1, 1, 0.564706)
+colorNoHit = Color(0.078204, 0.00878715, 0.0135696, 0.564706)
+gap = 5.0
+
+[node name="GrappleUIManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_q7pk6")
+unselected_color = Color(0.708182, 0.716195, 0.819089, 0.607843)
+selected_color = Color(0.488179, 1, 0.456277, 0.584314)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 571.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+use_top_left = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Button_reset" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Reset"
+
+[node name="Button_lvl1" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 1"
+
+[node name="Button_lvl2" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 2"
+
+[node name="Button_lvl3" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 3"
+
+[node name="Button_lvl4" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 4"
+
+[node name="Button_lvl5" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 5"

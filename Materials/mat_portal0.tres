@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://crs33rh0m1a0f"]
+
+[ext_resource type="Texture2D" uid="uid://dnbbita1vrrl6" path="res://Textures/tex_portal0.png" id="1_e23hb"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_e23hb")

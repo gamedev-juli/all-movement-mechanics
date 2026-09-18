@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnhxi408rifc8"
+path="res://.godot/imported/slope25.obj-13d7b5c9438eff5f008be7293c97b0a5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/slope25.obj-13d7b5c9438eff5f008be7293c97b0a5.mesh"]
+
+source_file="res://Models/lvl1/slope25.obj"
+dest_files=["res://.godot/imported/slope25.obj-13d7b5c9438eff5f008be7293c97b0a5.mesh", "res://.godot/imported/slope25.obj-13d7b5c9438eff5f008be7293c97b0a5.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

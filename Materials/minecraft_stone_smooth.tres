@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dim0tm4f5vfdw"]
+
+[ext_resource type="Texture2D" uid="uid://cr3lvuui4sup1" path="res://Textures/smooth_stone.png" id="1_10etp"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_10etp")
+uv1_offset = Vector3(0.5, 0, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 4

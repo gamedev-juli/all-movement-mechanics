@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcewdt40cvpam"
+path="res://.godot/imported/back.obj-97d0824522064eefe54609ae7d602aae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/back.obj-97d0824522064eefe54609ae7d602aae.mesh"]
+
+source_file="res://Models/lvl5/back.obj"
+dest_files=["res://.godot/imported/back.obj-97d0824522064eefe54609ae7d602aae.mesh", "res://.godot/imported/back.obj-97d0824522064eefe54609ae7d602aae.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
